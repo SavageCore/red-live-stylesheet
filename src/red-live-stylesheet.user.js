@@ -4,7 +4,7 @@
 // @namespace      https://savagecore.eu
 // @description    Live preview of stylesheet choice on RED
 // @include        http*://*redacted.ch/user.php?action=edit*
-// @version        0.0.0
+// @version        0.1.0
 // @date           2019-01-03
 // @require        https://greasemonkey.github.io/gm4-polyfill/gm4-polyfill.js
 // @downloadURL	   https://github.com/SavageCore/red-live-stylesheet/raw/master/src/red-live-stylesheet.user.js
