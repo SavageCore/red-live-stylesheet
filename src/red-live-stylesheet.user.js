@@ -14,8 +14,8 @@
 /*	global document */
 
 (function () {
-	const stylesheetElem = document.getElementById('stylesheet');
-	const externalStylesheetElem = document.getElementById('styleurl');
+	const stylesheetElem = document.querySelector('#stylesheet');
+	const externalStylesheetElem = document.querySelector('#styleurl');
 	const now = Number(new Date());
 	const stylesheets = {
 		1: `static/styles/shiro/style.css?v=${now}`,
@@ -50,6 +50,7 @@
 		if (!externalCssVal) {
 			return;
 		}
+
 		if (previousExternalCssVal !== externalCssVal) {
 			changeStyle(externalCssVal);
 			previousExternalCssVal = externalCssVal;
@@ -80,6 +81,7 @@
 			} else if (url.endsWith(`.css?v=${now}`)) {
 				resolve(true);
 			}
+
 			reject(new Error('Incomplete style url'));
 		});
 	}
