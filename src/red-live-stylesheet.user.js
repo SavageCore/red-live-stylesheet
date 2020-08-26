@@ -14,8 +14,8 @@
 /*	global document */
 
 (function () {
-	const stylesheetElem = document.querySelector('#stylesheet');
-	const externalStylesheetElem = document.querySelector('#styleurl');
+	const stylesheetElement = document.querySelector('#stylesheet');
+	const externalStylesheetElement = document.querySelector('#styleurl');
 	const now = Number(new Date());
 	const stylesheets = {
 		1: `static/styles/shiro/style.css?v=${now}`,
@@ -27,34 +27,34 @@
 		22: `static/styles/red_dark/style.css?v=${now}`,
 		23: `static/styles/red_light/style.css?v=${now}`
 	};
-	let previousCssVal = stylesheetElem.value.trim();
-	let previousExternalCssVal = externalStylesheetElem.value.trim();
+	let previousCssValue = stylesheetElement.value.trim();
+	let previousExternalCssValue = externalStylesheetElement.value.trim();
 
 	// Watch for updates to stylesheet drop down (for detecting change by JS and not user)
 	setInterval(() => {
-		const cssVal = stylesheetElem.value.trim();
-		if (!cssVal) {
+		const cssValue = stylesheetElement.value.trim();
+		if (!cssValue) {
 			return;
 		}
 
-		if (previousCssVal !== cssVal) {
-			changeStyle(stylesheets[cssVal]);
-			previousCssVal = cssVal;
-			previousExternalCssVal = externalStylesheetElem.value.trim();
+		if (previousCssValue !== cssValue) {
+			changeStyle(stylesheets[cssValue]);
+			previousCssValue = cssValue;
+			previousExternalCssValue = externalStylesheetElement.value.trim();
 		}
 	}, 100);
 
 	// Watch for updates to external stylesheet input (for detecting change by JS and not user)
 	setInterval(() => {
-		const externalCssVal = externalStylesheetElem.value.trim();
-		if (!externalCssVal) {
+		const externalCssValue = externalStylesheetElement.value.trim();
+		if (!externalCssValue) {
 			return;
 		}
 
-		if (previousExternalCssVal !== externalCssVal) {
-			changeStyle(externalCssVal);
-			previousExternalCssVal = externalCssVal;
-			previousCssVal = stylesheetElem.value.trim();
+		if (previousExternalCssValue !== externalCssValue) {
+			changeStyle(externalCssValue);
+			previousExternalCssValue = externalCssValue;
+			previousCssValue = stylesheetElement.value.trim();
 		}
 	}, 100);
 
