@@ -20,6 +20,6 @@
 	},
 	"homepage": "https://github.com/SavageCore/red-live-stylesheet#readme",
 	"devDependencies": {
-		"xo": "^0.33.0"
+		"xo": "^0.33.1"
 	}
 }
